@@ -11,9 +11,7 @@ cwd = os.getcwd()
 path = Path()
 
 application = Flask(__name__)
-
 model = load_learner(path, 'model/export.pkl')
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -22,8 +20,7 @@ def hello_world():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    #labels = ['grizzly','black','teddy']
-
+    #labels = ['aguila' , 'poker' ,  'corona', 'heineken', 'goldstar', 'stella-artois' ]
     file = request.files['file']
 
     #Store the uploaded images in a temporary folder
