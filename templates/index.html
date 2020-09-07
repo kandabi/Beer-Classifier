@@ -13,25 +13,31 @@
   
 </head>
 <style>
-body,h1 {font-family: "Raleway", sans-serif; color:white; font-weight: bold; }
-body, html {height: 100% }
-form{ color:white;}
-</style>
-<body style="background-image: url('https://images.unsplash.com/photo-1543493311-14cc44c3ced4?ixlib=rb-1.2.1&auto=format&fit=crop&w=2378&q=80'); background-size: cover; margin-left: 5%;">
- <div class="login">
-  <h1>Predict the bear</h1>
 
+body,h1 {
+	font-family: "Raleway", sans-serif; color:white; font-weight: bold; 
+}
+body, html {
+	max-height: 100% 
+}
+form { color:white;}
+
+</style>
+<body style="background-image: url('https://image.freepik.com/free-photo/defocused-image_1286-72.jpg?1'); background-size: cover; margin-left: 5%;">
+ <div class="login">
+  <h1>What's my beer?</h1>
+    <br>
+    <br>
     <div class="Variables">
     <form action="{{ url_for('predict')}}"method="post" enctype=multipart/form-data>
 
-    <label>Pick image</label>
+    <label>Select image</label>
     <input type=file name=file>
  
     </div>
     <br>
-   <br>
     <div>
-    <button type="submit" class="btn btn-primary btn-block btn-large">Predict The Bear</button>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Analyze beer</button>
     </div>
 
     </form>
